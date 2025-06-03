@@ -997,7 +997,7 @@
 #AdobeNetBlock-end
 
 # Block CorelDRAW internet access 
-127.0.0.1 mc.corel.com 
-127.0.0.1 apps.corel.com 
-127.0.0.1 ipm.corel.com 
-127.0.0.1 iws.corel.com 
+0.0.0.0 mc.corel.com 
+0.0.0.0 apps.corel.com 
+0.0.0.0 ipm.corel.com 
+0.0.0.0 iws.corel.com 
