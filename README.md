@@ -8,19 +8,23 @@ This project provides a curated hosts file that blocks unwanted telemetry, track
 
 ## Services Blocked
 
-### Windows Telemetry & Error Reporting
+### Microsoft Telemetry & Error Reporting
+- **Windows Telemetry**: Blocks Microsoft's diagnostic data collection
 - **Windows Error Reporting**: Blocks Watson telemetry and error reporting endpoints
 - **DiagTrack/Telemetry**: Blocks Microsoft's diagnostic tracking services
-- **Activity Tracking**: Blocks Windows activity monitoring services
+- **Visual Studio/VSCode**: Blocks telemetry from Microsoft development tools
 
-### Adobe Services
-- **Adobe Telemetry**: Blocks Adobe's usage analytics and telemetry
-- **Adobe Licensing**: Blocks license verification (may affect some Adobe software functionality)
+### Adobe Services (Comprehensive Blocking)
+- **Adobe Activation**: Blocks Adobe's software activation and licensing servers
+- **Adobe Telemetry**: Blocks Adobe's usage analytics and telemetry collection
 - **Adobe Statistics**: Blocks Adobe's analytics and tracking services
+- **Adobe Cloud Services**: Blocks Adobe's cloud-based services and APIs
+- **Adobe Licensing**: Blocks license verification servers (may affect some Adobe software functionality)
 
-### Development Tools
-- **Visual Studio/VSCode Telemetry**: Blocks telemetry from Microsoft development tools
+### Browser Telemetry
 - **Brave Browser Telemetry**: Blocks Brave browser's privacy analytics (P3A)
+- **Chrome Telemetry**: Blocks Chrome's safe browsing and telemetry
+- **Firefox Telemetry**: Blocks Firefox's telemetry and location services
 
 ### Analytics & Tracking Services
 - **Google Analytics & Advertising**: Blocks Google's tracking and advertising services
@@ -31,18 +35,32 @@ This project provides a curated hosts file that blocks unwanted telemetry, track
 - **Instagram Tracking**: Blocks Instagram's analytics
 - **Apple Telemetry**: Blocks Apple's usage analytics
 - **Amazon Advertising**: Blocks Amazon's advertising system
-- **Chrome Telemetry**: Blocks Chrome's safe browsing and telemetry
-- **Firefox Telemetry**: Blocks Firefox's telemetry and location services
 - **Common Analytics**: Blocks popular analytics services (Mixpanel, Amplitude, Segment, Hotjar, FullStory)
+
+### Ad Networks & Advertising
+- **Mainstream Ad Networks**: Blocks major advertising networks and platforms
+- **YouTube Ads**: Blocks YouTube advertising domains (partial blocking)
+- **Social Media Ads**: Blocks advertising from TikTok, Snapchat, Reddit, Discord
+
+### Professional Software Telemetry
+- **Autodesk**: Blocks AutoCAD, Maya, 3ds Max analytics and telemetry
+- **Unity**: Blocks Unity game engine analytics and telemetry
+- **GitHub**: Blocks GitHub analytics and telemetry (Microsoft-owned)
+- **Unreal Engine**: Blocks Epic Games analytics and telemetry
+
+### Security & Malware Protection
+- **Crypto Mining**: Blocks cryptocurrency mining domains
+- **Malware & Scam Sites**: Blocks known malicious and phishing domains
+- **Tracking Domains**: Blocks various tracking and analytics services
 
 ### Software-Specific Blocks
 - **CorelDRAW Internet Access**: Blocks CorelDRAW's online services and updates
 
 ## How to Use
 
-### Method 1: Automated Installation (Recommended)
+### Automated Installation (Recommended)
 
-#### Option A: Download and Run in One Command (Recommended)
+Download and run in one command (requires admin privileges):
 ```powershell
 # Download and execute immediately (requires admin privileges)
 Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/servalabs/win/main/replace-hosts.ps1" -UseBasicParsing).Content
@@ -50,23 +68,7 @@ Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ser
 
 **Note**: This runs the script directly from GitHub without saving a local file. Make sure to run PowerShell as Administrator.
 
-#### Option B: Download and Run Locally
-1. **Download the PowerShell script**:
-   ```powershell
-   # Download the script
-   Invoke-WebRequest -Uri "https://raw.githubusercontent.com/servalabs/win/main/replace-hosts.ps1" -OutFile "replace-hosts.ps1"
-   ```
-
-2. **Run as Administrator**:
-   - Right-click on `replace-hosts.ps1`
-   - Select "Run with PowerShell as administrator"
-   - The script will automatically:
-     - Create a backup of your current hosts file
-     - Download the latest hosts file from GitHub
-     - Replace your local hosts file
-     - Flush the DNS cache
-
-### Method 2: Manual Installation
+### Manual Installation
 
 1. **Backup your current hosts file**:
    ```cmd
@@ -82,14 +84,6 @@ Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ser
    ```cmd
    ipconfig /flushdns
    ```
-
-## Verification
-
-After installation, you can verify the blocking is working by:
-
-1. **Check Adobe services**: Try accessing Adobe's activation servers
-2. **Check Windows telemetry**: Monitor network traffic for blocked domains
-3. **Test analytics blocking**: Visit websites and check if analytics services are blocked
 
 ## Backup and Recovery
 
@@ -107,27 +101,10 @@ ipconfig /flushdns
 - **Windows Updates**: This does not block Windows Update services
 - **Browser Extensions**: Consider using additional privacy extensions for comprehensive protection
 - **Regular Updates**: The hosts file is updated regularly with new blocking rules
+- **Professional Software**: Some development tools may have reduced functionality due to telemetry blocking
 
-## Troubleshooting
+## File Structure
 
-### If websites don't load properly:
-1. Check if the domain is accidentally blocked
-2. Temporarily comment out the problematic line in the hosts file
-3. Flush DNS cache: `ipconfig /flushdns`
-
-### If Adobe software doesn't work:
-- Some Adobe software may require internet access for licensing
-- Consider uncommenting specific Adobe domains if needed
-
-### If the script fails:
-- Ensure you're running as administrator
-- Check your internet connection
-- Verify the GitHub repository is accessible
-
-## Contributing
-
-Feel free to submit issues or pull requests to improve the blocking rules or add new services.
-
-## License
-
-This project is open source and available under the MIT License.
+- `hosts` - The main hosts file with all blocking rules
+- `replace-hosts.ps1` - PowerShell script for automated installation
+- `README.md` - This documentation file
