@@ -1,3 +1,5 @@
+#v2.0
+# Microsoft Telemetry
 0.0.0.0 browser.pipe.aria.microsoft.com
 0.0.0.0 dmd.metaservices.microsoft.com
 0.0.0.0 ris.api.iris.microsoft.com
