@@ -1,19 +1,20 @@
-#v2.0
+#v2.1
+# Organized and updated hosts file for blocking telemetry, ads, trackers, and common malware domains
+
 # Microsoft Telemetry
+0.0.0.0 activity.windows.com
+0.0.0.0 browser.events.data.microsoft.com
 0.0.0.0 browser.pipe.aria.microsoft.com
 0.0.0.0 dmd.metaservices.microsoft.com
+0.0.0.0 outlookads.live.com
 0.0.0.0 ris.api.iris.microsoft.com
 0.0.0.0 teams.events.data.microsoft.com
 0.0.0.0 telecommand.telemetry.microsoft.com
 0.0.0.0 telemetry.microsoft.com
 0.0.0.0 vortex-win.data.microsoft.com
 0.0.0.0 watson.events.data.microsoft.com
-0.0.0.0 activity.windows.com
-0.0.0.0 browser.events.data.microsoft.com
-0.0.0.0 outlookads.live.com
 
 # Windows Error Reporting
-# https://learn.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/windows-error-reporting-diagnostics-enablement-guidance#configure-network-endpoints-to-be-allowed
 0.0.0.0 watson.microsoft.com
 0.0.0.0 watson.telemetry.microsoft.com
 0.0.0.0 umwatsonc.events.data.microsoft.com
@@ -25,34 +26,221 @@
 0.0.0.0 weus2watcab02.blob.core.windows.net
 
 # DiagTrack/Telemetry
-0.0.0.0 events.data.microsoft.com
-0.0.0.0 eu-v20.events.data.microsoft.com
 0.0.0.0 au-v20.events.data.microsoft.com
-0.0.0.0 uk-v20.events.data.microsoft.com
-0.0.0.0 v10.events.data.microsoft.com
-0.0.0.0 us-v20.events.data.microsoft.com
-0.0.0.0 v20.events.data.microsoft.com
+0.0.0.0 eu-v20.events.data.microsoft.com
 0.0.0.0 events-sandbox.data.microsoft.com
+0.0.0.0 events.data.microsoft.com
 0.0.0.0 pipe.dev.trafficmanager.net
-0.0.0.0 v10c.events.data.microsoft.com
+0.0.0.0 uk-v20.events.data.microsoft.com
+0.0.0.0 us-v20.events.data.microsoft.com
+0.0.0.0 v10.events.data.microsoft.com
 0.0.0.0 v10.vortex-win.data.microsoft.com
+0.0.0.0 v10c.events.data.microsoft.com
+0.0.0.0 v20.events.data.microsoft.com
 
-# Brave
-0.0.0.0 p3a.brave.com
+# Brave Browser Telemetry
+0.0.0.0 cr.brave.com
+0.0.0.0 p2a-json.brave.com
 0.0.0.0 p2a.brave.com
 0.0.0.0 p3a-json.brave.com
-0.0.0.0 p2a-json.brave.com
-0.0.0.0 cr.brave.com
+0.0.0.0 p3a.brave.com
 0.0.0.0 star-randsrv.bsg.brave.com
 
 # Visual Studio / VSCode
-0.0.0.0 vortex.data.microsoft.com
-0.0.0.0 dc.services.visualstudio.com
-0.0.0.0 visualstudio-devdiv-c2s.msedge.net
 0.0.0.0 az667904.vo.msecnd.net
-0.0.0.0 scus-breeziest-in.cloudapp.net
-0.0.0.0 nw-umwatson.events.data.microsoft.com
+0.0.0.0 dc.services.visualstudio.com
 0.0.0.0 mobile.events.data.microsoft.com
+0.0.0.0 nw-umwatson.events.data.microsoft.com
+0.0.0.0 scus-breeziest-in.cloudapp.net
+0.0.0.0 visualstudio-devdiv-c2s.msedge.net
+0.0.0.0 vortex.data.microsoft.com
+
+# Block CorelDRAW internet access
+0.0.0.0 apps.corel.com
+0.0.0.0 ipm.corel.com
+0.0.0.0 iws.corel.com
+0.0.0.0 mc.corel.com
+
+# Google Analytics & Advertising (Tracking Only)
+0.0.0.0 ad.doubleclick.net
+0.0.0.0 adservice.google.com
+0.0.0.0 analytics.google.com
+0.0.0.0 doubleclick.net
+0.0.0.0 googleadservices.com
+0.0.0.0 googlesyndication.com
+0.0.0.0 googletagmanager.com
+0.0.0.0 googletagservices.com
+0.0.0.0 pagead2.googlesyndication.com
+0.0.0.0 ssl.google-analytics.com
+0.0.0.0 static.doubleclick.net
+0.0.0.0 www-google-analytics.l.google.com
+0.0.0.0 www.google-analytics.com
+0.0.0.0 www.googletagmanager.com
+0.0.0.0 www.googletagservices.com
+
+# Facebook/Meta Tracking (Analytics Only)
+0.0.0.0 ads.facebook.com
+0.0.0.0 an.facebook.com
+0.0.0.0 pixel.facebook.com
+
+# Twitter/X Analytics (Tracking Only)
+0.0.0.0 analytics.twitter.com
+
+# LinkedIn Tracking (Analytics Only)
+0.0.0.0 analytics.linkedin.com
+0.0.0.0 px.ads.linkedin.com
+
+# Pinterest Tracking (Analytics Only)
+0.0.0.0 analytics.pinterest.com
+0.0.0.0 log.pinterest.com
+
+# Instagram Tracking (Analytics Only)
+0.0.0.0 analytics.instagram.com
+0.0.0.0 graph.instagram.com
+
+# Apple Telemetry (Analytics Only)
+0.0.0.0 analytics.apple.com
+0.0.0.0 metrics.apple.com
+0.0.0.0 metrics.icloud.com
+0.0.0.0 metrics.mzstatic.com
+0.0.0.0 securemetrics.apple.com
+
+# Amazon Advertising (Ads Only)
+0.0.0.0 aax-eu-west-1.amazon-adsystem.com
+0.0.0.0 aax-us-east.amazon-adsystem.com
+0.0.0.0 aax.amazon-adsystem.com
+0.0.0.0 amazon-adsystem.com
+0.0.0.0 fls-na.amazon-adsystem.com
+
+# Chrome Telemetry (Analytics Only)
+0.0.0.0 chrome-devtools-frontend.appspot.com
+
+# Firefox Telemetry (Analytics Only)
+0.0.0.0 aus5.mozilla.org
+0.0.0.0 telemetry.mozilla.org
+0.0.0.0 tiles.services.mozilla.com
+
+# Common Analytics Services (Tracking Only)
+0.0.0.0 amplitude.com
+0.0.0.0 api.amplitude.com
+0.0.0.0 api.mixpanel.com
+0.0.0.0 api.segment.io
+0.0.0.0 app.fullstory.com
+0.0.0.0 cdn.mxpnl.com
+0.0.0.0 fullstory.com
+0.0.0.0 hotjar.com
+0.0.0.0 mixpanel.com
+0.0.0.0 rs.fullstory.com
+0.0.0.0 segment.com
+0.0.0.0 static.hotjar.com
+0.0.0.0 vars.hotjar.com
+
+# Ad Networks (Mainstream)
+0.0.0.0 adclick.g.doubleclick.net
+0.0.0.0 ad-delivery.net
+0.0.0.0 adform.net
+0.0.0.0 adroll.com
+0.0.0.0 ads.pubmatic.com
+0.0.0.0 adsafeprotected.com
+0.0.0.0 advertising.com
+0.0.0.0 atdmt.com
+0.0.0.0 contextweb.com
+0.0.0.0 doubleverify.com
+0.0.0.0 openx.net
+0.0.0.0 partner.googleadservices.com
+0.0.0.0 pubads.g.doubleclick.net
+0.0.0.0 quantserve.com
+0.0.0.0 revcontent.com
+0.0.0.0 rubiconproject.com
+0.0.0.0 serving-sys.com
+0.0.0.0 taboola.com
+0.0.0.0 trafficjunky.net
+0.0.0.0 zedo.com
+
+# YouTube Ads (Partial)
+0.0.0.0 pubads.g.doubleclick.net
+0.0.0.0 s.youtube.com
+0.0.0.0 video-ad-stats.l.google.com
+
+# TikTok, Snapchat, Reddit, Discord Telemetry/Ads
+0.0.0.0 analytics.snapchat.com
+0.0.0.0 analytics.tiktok.com
+0.0.0.0 api.amplitude.com
+0.0.0.0 api2-16-h2.musical.ly
+0.0.0.0 app-analytics.snapchat.com
+0.0.0.0 events.redditmedia.com
+0.0.0.0 log.tiktokv.com
+0.0.0.0 sentry.io
+0.0.0.0 ads.reddit.com
+
+# General Tracking/Analytics
+0.0.0.0 api.segment.io
+0.0.0.0 cdn.amplitude.com
+0.0.0.0 cdn.mxpnl.com
+0.0.0.0 pixel.facebook.com
+0.0.0.0 pixel.quantserve.com
+0.0.0.0 secure.quantserve.com
+0.0.0.0 stats.g.doubleclick.net
+0.0.0.0 stats.l.doubleclick.net
+0.0.0.0 stats.m.doubleclick.net
+0.0.0.0 stats.p.doubleclick.net
+0.0.0.0 stats.t.doubleclick.net
+0.0.0.0 stats.y.doubleclick.net
+0.0.0.0 stats.z.doubleclick.net
+
+# Crypto Mining Domains
+0.0.0.0 authedmine.com
+0.0.0.0 coinhive.com
+0.0.0.0 cryptoloot.pro
+0.0.0.0 jsecoin.com
+0.0.0.0 minr.pw
+0.0.0.0 webmine.cz
+
+# Malware, Scam, and Phishing Domains
+0.0.0.0 adf.ly
+0.0.0.0 bc.vc
+0.0.0.0 browser-hijack.com
+0.0.0.0 clickadu.com
+0.0.0.0 coinhive.com
+0.0.0.0 cryptoloot.pro
+0.0.0.0 exe.app
+0.0.0.0 exe.bid
+0.0.0.0 exe.io
+0.0.0.0 fakeupdate.net
+0.0.0.0 jsecoin.com
+0.0.0.0 linkbucks.com
+0.0.0.0 malicious.com
+0.0.0.0 ouo.io
+0.0.0.0 phishing-site.com
+0.0.0.0 popads.net
+0.0.0.0 popcash.net
+0.0.0.0 propellerads.com
+0.0.0.0 scamdomain.com
+0.0.0.0 sh.st
+0.0.0.0 shorte.st
+0.0.0.0 tech-support-scam.com
+
+# Tracking Domains
+0.0.0.0 bluekai.com
+0.0.0.0 chartbeat.com
+0.0.0.0 clicktale.net
+0.0.0.0 crazyegg.com
+0.0.0.0 demdex.net
+0.0.0.0 krxd.net
+0.0.0.0 mathtag.com
+0.0.0.0 moatads.com
+0.0.0.0 ml314.com
+0.0.0.0 mookie1.com
+0.0.0.0 newrelic.com
+0.0.0.0 nexac.com
+0.0.0.0 omtrdc.net
+0.0.0.0 optimizely.com
+0.0.0.0 rfihub.com
+0.0.0.0 scorecardresearch.com
+0.0.0.0 simpli.fi
+0.0.0.0 sitescout.com
+0.0.0.0 smartadserver.com
+0.0.0.0 tapad.com
 
 #AdobeNetBlock-start
 0.0.0.0 adobe.io
@@ -730,48 +918,7 @@
 0.0.0.0 3reg39xtkp.adobestats.io
 0.0.0.0 quij2u03a1.adobestats.io
 0.0.0.0 xo9j8bcw4a.adobe.io
-0.0.0.0 3.233.129.217
-0.0.0.0 192.150.14.69
-0.0.0.0 192.150.18.101
-0.0.0.0 192.150.18.108
-0.0.0.0 192.150.22.40
-0.0.0.0 192.150.8.100
-0.0.0.0 192.150.8.118
-0.0.0.0 199.7.52.190
-0.0.0.0 199.7.54.72
 0.0.0.0 209-34-83-73.ood.opsource.net
-0.0.0.0 209.34.83.67
-0.0.0.0 209.34.83.73
-0.0.0.0 18.207.85.246
-0.0.0.0 52.6.155.20
-0.0.0.0 52.10.49.85
-0.0.0.0 23.22.30.141
-0.0.0.0 34.215.42.13
-0.0.0.0 52.84.156.37
-0.0.0.0 65.8.207.109
-0.0.0.0 3.220.11.113
-0.0.0.0 3.221.72.231
-0.0.0.0 3.216.32.253
-0.0.0.0 3.208.248.199
-0.0.0.0 3.219.243.226
-0.0.0.0 13.227.103.57
-0.0.0.0 34.192.151.90
-0.0.0.0 34.237.241.83
-0.0.0.0 44.240.189.42
-0.0.0.0 52.20.222.155
-0.0.0.0 52.208.86.132
-0.0.0.0 54.208.86.132
-0.0.0.0 63.140.38.120
-0.0.0.0 63.140.38.160
-0.0.0.0 63.140.38.169
-0.0.0.0 63.140.38.219
-0.0.0.0 18.228.243.121
-0.0.0.0 18.230.164.221
-0.0.0.0 54.156.135.114
-0.0.0.0 54.221.228.134
-0.0.0.0 54.224.241.105
-0.0.0.0 100.24.211.130
-0.0.0.0 162.247.242.20
 0.0.0.0 ic.adobe.io
 0.0.0.0 b5kbg2ggog.adobe.io
 0.0.0.0 3dns-1.adobe.com
@@ -823,13 +970,8 @@
 0.0.0.0 na4r.services.adobe.com
 0.0.0.0 ocsp.spo1.verisign.com
 0.0.0.0 ood.opsource.net
-0.0.0.0 practivate.adobe
-0.0.0.0 practivate.adobe.
 0.0.0.0 practivate.adobe.com
 0.0.0.0 practivate.adobe.de
-0.0.0.0 practivate.adobe.ipp
-0.0.0.0 practivate.adobe.newoa
-0.0.0.0 practivate.adobe.ntp
 0.0.0.0 prod-rel-ffc-ccm.oobesaas.adobe.com
 0.0.0.0 s-2.adobe.com
 0.0.0.0 s-3.adobe.com
@@ -947,7 +1089,6 @@
 0.0.0.0 dyzt55url8.adobe.io
 0.0.0.0 gw8gfjbs05.adobe.io
 0.0.0.0 wip.adobe.com
-0.0.0.0 199.232.114.137
 0.0.0.0 www.wip.adobe.com
 0.0.0.0 www.wip1.adobe.com
 0.0.0.0 www.wip2.adobe.com
@@ -997,139 +1138,36 @@
 0.0.0.0 jgletrkp.mw1i8.adobestats.io
 #AdobeNetBlock-end
 
-# Block CorelDRAW internet access 
-0.0.0.0 mc.corel.com 
-0.0.0.0 apps.corel.com 
-0.0.0.0 ipm.corel.com 
-0.0.0.0 iws.corel.com 
+# Professional Software Telemetry/Analytics (Safe to Block)
 
-# Google Analytics & Advertising (Tracking Only)
-0.0.0.0 analytics.google.com
-0.0.0.0 www.google-analytics.com
-0.0.0.0 googletagmanager.com
-0.0.0.0 googletagservices.com
-0.0.0.0 doubleclick.net
-0.0.0.0 googleadservices.com
-0.0.0.0 googlesyndication.com
-0.0.0.0 pagead2.googlesyndication.com
-0.0.0.0 adservice.google.com
-0.0.0.0 ad.doubleclick.net
-0.0.0.0 static.doubleclick.net
-0.0.0.0 www.googletagmanager.com
-0.0.0.0 www.googletagservices.com
-0.0.0.0 ssl.google-analytics.com
-0.0.0.0 www-google-analytics.l.google.com
-
-# Facebook/Meta Tracking (Analytics Only)
-0.0.0.0 graph.facebook.com
-0.0.0.0 connect.facebook.net
-0.0.0.0 pixel.facebook.com
-0.0.0.0 an.facebook.com
-0.0.0.0 ads.facebook.com
-
-# Twitter/X Analytics (Tracking Only)
-0.0.0.0 analytics.twitter.com
-0.0.0.0 t.co
-
-# LinkedIn Tracking (Analytics Only)
-0.0.0.0 px.ads.linkedin.com
-0.0.0.0 analytics.linkedin.com
-
-# Pinterest Tracking (Analytics Only)
-0.0.0.0 analytics.pinterest.com
-0.0.0.0 log.pinterest.com
-
-# Instagram Tracking (Analytics Only)
-0.0.0.0 graph.instagram.com
-0.0.0.0 analytics.instagram.com
-
-# Apple Telemetry (Analytics Only)
-0.0.0.0 metrics.apple.com
-0.0.0.0 securemetrics.apple.com
-0.0.0.0 metrics.icloud.com
-0.0.0.0 metrics.mzstatic.com
-0.0.0.0 analytics.apple.com
-
-# Amazon Advertising (Ads Only)
-0.0.0.0 amazon-adsystem.com
-0.0.0.0 aax-us-east.amazon-adsystem.com
-0.0.0.0 aax-eu-west-1.amazon-adsystem.com
-0.0.0.0 aax.amazon-adsystem.com
-0.0.0.0 fls-na.amazon-adsystem.com
-
-# Chrome Telemetry (Analytics Only)
-0.0.0.0 safebrowsing.google.com
-0.0.0.0 safebrowsing-cache.google.com
-0.0.0.0 chrome-devtools-frontend.appspot.com
-
-# Firefox Telemetry (Analytics Only)
-0.0.0.0 telemetry.mozilla.org
-0.0.0.0 firefox.settings.services.mozilla.com
-0.0.0.0 push.services.mozilla.com
-0.0.0.0 aus5.mozilla.org
-0.0.0.0 location.services.mozilla.com
-0.0.0.0 tiles.services.mozilla.com
-
-# Common Analytics Services (Tracking Only)
-0.0.0.0 mixpanel.com
-0.0.0.0 api.mixpanel.com
-0.0.0.0 cdn.mxpnl.com
-0.0.0.0 amplitude.com
-0.0.0.0 api.amplitude.com
-0.0.0.0 segment.com
-0.0.0.0 api.segment.io
-0.0.0.0 hotjar.com
+# Autodesk (AutoCAD, Maya, 3ds Max) Analytics/Telemetry
+0.0.0.0 autodesk.com.edgesuite.net
+0.0.0.0 api.autodesk.com
+0.0.0.0 analytics.autodesk.com
+0.0.0.0 appcenter.ms
+0.0.0.0 applicationinsights.azure.com
+0.0.0.0 applicationinsights.io
+0.0.0.0 insights.hotjar.com
 0.0.0.0 static.hotjar.com
-0.0.0.0 vars.hotjar.com
-0.0.0.0 fullstory.com
-0.0.0.0 rs.fullstory.com
-0.0.0.0 app.fullstory.com
 
-# Ad Networks
-0.0.0.0 adserver.adtechus.com
-0.0.0.0 ad.doubleclick.net
-0.0.0.0 ads.yahoo.com
-0.0.0.0 ads.pubmatic.com
-0.0.0.0 adsafeprotected.com
-0.0.0.0 adclick.g.doublecklick.net
-0.0.0.0 ad-delivery.net
-0.0.0.0 adform.net
-0.0.0.0 adroll.com
-0.0.0.0 advertising.com
-0.0.0.0 atdmt.com
-0.0.0.0 contextweb.com
-0.0.0.0 doubleverify.com
-0.0.0.0 googlesyndication.com
-0.0.0.0 googletagservices.com
-0.0.0.0 openx.net
-0.0.0.0 quantserve.com
-0.0.0.0 revcontent.com
-0.0.0.0 rubiconproject.com
-0.0.0.0 serving-sys.com
-0.0.0.0 taboola.com
-0.0.0.0 trafficjunky.net
-0.0.0.0 zedo.com
+# Unity Analytics/Telemetry
+0.0.0.0 config.uca.cloud.unity3d.com
+0.0.0.0 perf-events.cloud.unity3d.com
+0.0.0.0 remote-config-proxy-prd.uca.cloud.unity3d.com
+0.0.0.0 thind-gke-euw.prd.data.corp.unity3d.com
+0.0.0.0 thind-gke-usc.prd.data.corp.unity3d.com
 
-# Tracking Domains
-0.0.0.0 scorecardresearch.com
-0.0.0.0 optimizely.com
-0.0.0.0 chartbeat.com
-0.0.0.0 clicktale.net
-0.0.0.0 crazyegg.com
-0.0.0.0 newrelic.com
-0.0.0.0 omtrdc.net
-0.0.0.0 mathtag.com
-0.0.0.0 tapad.com
-0.0.0.0 bluekai.com
-0.0.0.0 demdex.net
-0.0.0.0 krxd.net
-0.0.0.0 ml314.com
-0.0.0.0 moatads.com
-0.0.0.0 mookie1.com
-0.0.0.0 nexac.com
-0.0.0.0 rfihub.com
-0.0.0.0 simpli.fi
-0.0.0.0 sitescout.com
-0.0.0.0 smartadserver.com
-0.0.0.0 tapad.com
-0.0.0.0 tracking-protection.cdn.mozilla.net
+# GitHub Analytics/Telemetry (Microsoft-owned)
+0.0.0.0 collector.githubapp.com
+0.0.0.0 collector-cdn.github.com
+0.0.0.0 opengraph.githubassets.com
+
+# JetBrains Analytics/Telemetry
+0.0.0.0 resources.jetbrains.com
+0.0.0.0 www.jetbrains.com
+
+# Unreal Engine Analytics/Telemetry
+0.0.0.0 datarouter.ol.epicgames.com
+0.0.0.0 tracking.epicgames.com
+
+# (End of hosts file)
