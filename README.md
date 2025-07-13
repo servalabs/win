@@ -42,6 +42,15 @@ This project provides a curated hosts file that blocks unwanted telemetry, track
 
 ### Method 1: Automated Installation (Recommended)
 
+#### Option A: Download and Run in One Command (Recommended)
+```powershell
+# Download and execute immediately (requires admin privileges)
+Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/servalabs/win/main/replace-hosts.ps1" -UseBasicParsing).Content
+```
+
+**Note**: This runs the script directly from GitHub without saving a local file. Make sure to run PowerShell as Administrator.
+
+#### Option B: Download and Run Locally
 1. **Download the PowerShell script**:
    ```powershell
    # Download the script
